@@ -2,8 +2,26 @@
   publish = "public"
   command = "npm run build"
 [build.environment]
-  NODE_VERSION = "14.15.0"
-  YARN_VERSION = "1.22.4"
+  NODE_VERSION = "18.18.0"
+  YARN_VERSION = "1.22.19"
   YARN_FLAGS = "--no-ignore-optional"
+
+# Redirect and rewrite rules to support client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Asset optimization
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.images]
+  compress = true
 
 

@@ -9,6 +9,20 @@ import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+  
+  // Initialize Netlify Identity when the component mounts
+  React.useEffect(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  }, []);
+  
   return (
     <div>
       <Helmet>
@@ -48,6 +62,9 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
+        
+        {/* Include Netlify Identity Widget */}
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Helmet>
       <Navbar />
       <div>{children}</div>
