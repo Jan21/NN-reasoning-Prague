@@ -1,59 +1,70 @@
 ---
 templateKey: index-page
-title: Conference 2025
-image: /img/conference-banner.jpg
-heading: Join us for an inspiring tech conference experience
-subheading: June 12-14, 2025 • San Francisco, CA
+title: Great coffee with a conscience
+image: /img/home-jumbotron.jpg
+heading: Great coffee with a conscience
+subheading: Support sustainable farming while enjoying a cup
 mainpitch:
-  title: About the Conference
+  title: Why Kaldi
   description: >
-    Conference 2025 brings together industry experts, researchers, and technology enthusiasts
-    for three days of learning, networking, and inspiration. This year's theme focuses on 
-    emerging technologies and their impact on our future.
+    Kaldi is the coffee store for everyone who believes that great coffee
+    shouldn't just taste good, it should do good too. We source all of our beans
+    directly from small scale sustainable farmers and make sure part of the
+    profits are reinvested in their communities.
 description: >-
-  Whether you're a seasoned professional or just starting your journey in tech,
-  Conference 2025 offers valuable insights, hands-on workshops, and networking
-  opportunities to help you grow your skills and advance your career.
+  Kaldi is the ultimate spot for coffee lovers who want to learn about their
+  java’s origin and support the farmers that grew it. We take coffee production,
+  roasting and brewing seriously and we’re glad to pass that knowledge to
+  anyone.
 intro:
   blurbs:
-    - image: /img/speakers-icon.png
+    - image: /img/coffee.png
       text: >
-        Learn from industry leaders and visionaries who are shaping the future of technology.
-        Our carefully selected speakers will share their expertise, experiences, and insights
-        through keynotes, panel discussions, and interactive sessions.
-    - image: /img/workshops-icon.png
+        We sell green and roasted coffee beans that are sourced directly from
+        independent farmers and farm cooperatives. We’re proud to offer a
+        variety of coffee beans grown with great care for the environment and
+        local communities. Check our post or contact us directly for current
+        availability.
+    - image: /img/coffee-gear.png
       text: >
-        Participate in hands-on workshops led by experts in various fields. From coding
-        sessions to design thinking exercises, these workshops provide practical skills you
-        can immediately apply to your work.
-    - image: /img/networking-icon.png
+        We offer a small, but carefully curated selection of brewing gear and
+        tools for every taste and experience level. No matter if you roast your
+        own beans or just bought your first french press, you’ll find a gadget
+        to fall in love with in our shop.
+    - image: /img/tutorials.png
       text: >
-        Connect with fellow attendees, speakers, and sponsors during our dedicated networking
-        events. Build meaningful relationships, explore collaboration opportunities, and
-        expand your professional network in a relaxed and inclusive environment.
-    - image: /img/exhibition-icon.png
+        Love a great cup of coffee, but never knew how to make one? Bought a
+        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
+        to help. You can schedule a custom 1-on-1 consultation with our baristas
+        to learn anything you want to know about coffee roasting and brewing.
+        Email us or call the store for details.
+    - image: /img/meeting-space.png
       text: >
-        Visit our exhibition area to discover the latest innovations, tools, and services from
-        leading tech companies. Meet with company representatives, experience hands-on demos,
-        and explore career opportunities with our sponsors.
-  heading: What to Expect
+        We believe that good coffee has the power to bring people together.
+        That’s why we decided to turn a corner of our shop into a cozy meeting
+        space where you can hang out with fellow coffee lovers and learn about
+        coffee making techniques. All of the artwork on display there is for
+        sale. The full price you pay goes to the artist.
+  heading: What we offer
   description: >
-    Conference 2025 features a diverse program of keynotes, technical sessions, workshops,
-    and networking events. With multiple tracks covering various topics, you can customize
-    your experience to match your interests and learning goals.
+    Kaldi is the ultimate spot for coffee lovers who want to learn about their
+    java’s origin and support the farmers that grew it. We take coffee
+    production, roasting and brewing seriously and we’re glad to pass that
+    knowledge to anyone. This is an edit via identity...
 main:
-  heading: Key Dates & Information
+  heading: Great coffee with no compromises
   description: >
-    Mark your calendars and prepare for an unforgettable conference experience. Early bird
-    registration offers special pricing, and our call for papers is now open for those
-    interested in presenting at the event.
+    We hold our coffee to the highest standards from the shrub to the cup.
+    That’s why we’re meticulous and transparent about each step of the coffee’s
+    journey. We personally visit each farm to make sure the conditions are
+    optimal for the plants, farmers and the local environment.
   image1:
-    alt: Conference attendees networking
-    image: /img/conference-networking.jpg
+    alt: A close-up of a paper filter filled with ground coffee
+    image: /img/products-grid3.jpg
   image2:
-    alt: Speaker presenting at a conference
-    image: /img/conference-speaker.jpg
+    alt: A green cup of a coffee on a wooden table
+    image: /img/products-grid2.jpg
   image3:
-    alt: Conference workshop session
-    image: /img/conference-workshop.jpg
+    alt: Coffee beans
+    image: /img/products-grid1.jpg
 ---

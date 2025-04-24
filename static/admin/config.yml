@@ -2,11 +2,11 @@ backend:
   name: git-gateway
   branch: main
   commit_messages:
-    create: "Create {{collection}} "{{slug}}""
-    update: "Update {{collection}} "{{slug}}""
-    delete: "Delete {{collection}} "{{slug}}""
-    uploadMedia: "[skip ci] Upload "{{path}}""
-    deleteMedia: "[skip ci] Delete "{{path}}""
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
 
 local_backend: true
 media_folder: static/img
@@ -14,7 +14,7 @@ public_folder: /img
 
 collections:
   - name: "blog"
-    label: "News & Updates"
+    label: "Blog"
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -32,57 +32,6 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-
-  - name: "speakers"
-    label: "Speakers"
-    folder: "src/pages/speakers"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "speaker-profile",
-        }
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Company/Organization", name: "organization", widget: "string" }
-      - { label: "Speaker Image", name: "speakerImage", widget: "image" }
-      - { label: "Bio", name: "bio", widget: "markdown" }
-      - { label: "Talk Title", name: "talkTitle", widget: "string" }
-      - { label: "Talk Abstract", name: "talkAbstract", widget: "markdown" }
-      - { label: "Featured Speaker", name: "featured", widget: "boolean", default: false }
-      - { label: "Order", name: "order", widget: "number", default: 999 }
-      - { label: "Social Links", name: "socialLinks", widget: "object", fields: [
-          { label: "Twitter", name: "twitter", widget: "string", required: false },
-          { label: "LinkedIn", name: "linkedin", widget: "string", required: false },
-          { label: "Website", name: "website", widget: "string", required: false },
-        ]}
-
-  - name: "schedule"
-    label: "Schedule"
-    folder: "src/pages/schedule"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "schedule-day",
-        }
-      - { label: "Title (e.g. Day 1)", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Sessions", name: "sessions", widget: "list", fields: [
-          { label: "Time Start", name: "timeStart", widget: "string" },
-          { label: "Time End", name: "timeEnd", widget: "string" },
-          { label: "Title", name: "title", widget: "string" },
-          { label: "Speaker (Optional)", name: "speaker", widget: "string", required: false },
-          { label: "Description", name: "description", widget: "markdown", required: false },
-          { label: "Location/Room", name: "location", widget: "string", required: false },
-          { label: "Session Type", name: "type", widget: "select", options: ["talk", "workshop", "break", "registration", "social"], default: "talk" },
-        ]}
 
   - name: "pages"
     label: "Pages"
@@ -184,72 +133,114 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/venue/index.md"
-        label: "Venue"
-        name: "venue"
+      - file: "src/pages/products/index.md"
+        label: "Products Page"
+        name: "products"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "venue-page",
+              default: "product-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Venue Name", name: "venueName", widget: "string" }
-          - { label: "Venue Address", name: "venueAddress", widget: "string" }
-          - { label: "Venue Image", name: "venueImage", widget: "image" }
-          - { label: "Venue Description", name: "body", widget: "markdown" }
-          - { label: "Google Maps Embed URL", name: "googleMapsUrl", widget: "string" }
-          - { label: "Nearby Accommodations", name: "accommodations", widget: "list", fields: [
-              { label: "Hotel Name", name: "hotelName", widget: "string" },
-              { label: "Hotel Address", name: "hotelAddress", widget: "string" },
-              { label: "Hotel Website", name: "hotelWebsite", widget: "string" },
-              { label: "Hotel Description", name: "hotelDescription", widget: "text", required: false },
-              { label: "Special Rate Info", name: "specialRate", widget: "text", required: false },
-            ]}
-          - { label: "Transportation Info", name: "transportation", widget: "markdown" }
-      - file: "src/pages/registration/index.md"
-        label: "Registration"
-        name: "registration"
-        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: string }
           - {
-              label: "Template Key", 
-              name: "templateKey",
-              widget: "hidden",
-              default: "registration-page",
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Blurbs,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Registration Information", name: "body", widget: "markdown" }
-          - { label: "Registration Open", name: "registrationOpen", widget: "boolean", default: true }
-          - { label: "Registration URL", name: "registrationUrl", widget: "string" }
           - {
-              label: "Ticket Types",
-              name: "ticketTypes",
-              widget: "list",
-              fields: [
-                { label: "Type", name: "type", widget: "string" },
-                { label: "Price", name: "price", widget: "string" },
-                { label: "Description", name: "description", widget: "text" },
-                { label: "Available Until", name: "availableUntil", widget: "datetime", required: false },
-              ],
+              label: Main,
+              name: main,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Image1,
+                    name: image1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image2,
+                    name: image2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image3,
+                    name: image3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                ],
             }
-      - file: "src/pages/call-for-papers/index.md"
-        label: "Call for Papers"
-        name: "callForPapers"
-        fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "cfp-page",
+              label: Testimonials,
+              name: testimonials,
+              widget: list,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: string },
+                  { label: Author, name: author, widget: string },
+                ],
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "CFP Description", name: "body", widget: "markdown" }
-          - { label: "CFP Open", name: "cfpOpen", widget: "boolean", default: true }
-          - { label: "CFP Deadline", name: "cfpDeadline", widget: "datetime" }
-          - { label: "CFP Form URL", name: "cfpUrl", widget: "string" }
-          - { label: "Submission Guidelines", name: "submissionGuidelines", widget: "markdown" }
-          - { label: "Important Dates", name: "importantDates", widget: "list", fields: [
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Date", name: "date", widget: "datetime" },
-            ]}
+          - { label: Full_image, name: full_image, widget: image }
+          - {
+              label: Pricing,
+              name: pricing,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: string },
+                  {
+                    label: Plans,
+                    name: plans,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Plan, name: plan, widget: string },
+                        { label: Price, name: price, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        { label: Items, name: items, widget: list },
+                      ],
+                  },
+                ],
+            }
