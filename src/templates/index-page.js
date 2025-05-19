@@ -10,27 +10,47 @@ import FullWidthImage from "../components/FullWidthImage";
 
 // Sample speaker data - you'll likely want to move this to your CMS or a data file later
 const sampleSpeakers = [
-  { 
-    name: "Alicja", 
-    works: "IDEAS NCBR",
-    image: "/img/speakers/alicja.jpg", 
-    title: "Title", 
+
+  { name: "Core Francisco Park", 
+    works: "Harvard",
+    image: "/img/speakers/francisco.jpg", 
+    title: "Specialist in AI ethics.",
+    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+  },
+  { name: "Kazuki Irie", 
+    works: "Harvard",
+    image: "/img/speakers/kazuki.jpg", 
+    title: "Specialist in AI ethics.",
+    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+  },
+  { name: "William T. Redman", 
+    works: "Johns Hopkins",
+    image: "/img/speakers/william.jpg", 
+    title: "Specialist in AI ethics.",
+    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+  },
+  { name: "Federico Barbero", 
+    works: "Oxford",
+    image: "/img/speakers/federico.jpg", 
+    title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
 
-
-
-  { name: "Jonas", 
+  { name: "Jonas Hübotter", 
     works: "ETH Zurich",
     image: "/img/speakers/jonas.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
-
-
-  { name: "Core Francisco Park", 
-    works: "Harvard",
-    image: "/img/speakers/francisco.jpg", 
+  { name: "Aryo Lotfi", 
+    works: "EPFL",
+    image: "/img/speakers/aryosq.jpg", 
+    title: "Specialist in AI ethics.",
+    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+  },
+  { name: "Takeru Miyato", 
+    works: "U. Tübingen",
+    image: "/img/speakers/takeru.webp", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
@@ -41,57 +61,63 @@ const sampleSpeakers = [
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
-
-  { name: "Kazuki", 
-    works: "Harvard",
-    image: "/img/speakers/kazuki.jpg", 
+  { name: "Tomáš Pajdla", 
+    works: "CIIRC",
+    image: "/img/speakers/tpajdla.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
-  { name: "Federico", 
-    works: "Oxford",
-    image: "/img/speakers/federico.jpg", 
+  { name: "Vít Musil", 
+    works: "MUNI",
+    image: "/img/speakers/vejteksq.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
-
+  { 
+    name: "Alicja Ziarko", 
+    works: "IDEAS NCBR",
+    image: "/img/speakers/alicja.jpg", 
+    title: "Title", 
+    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+  },
+  { name: "Gracjan Góral", 
+    works: "IDEAS NCBR",
+    image: "/img/speakers/gracjansq.jpg", 
+    title: "Specialist in AI ethics.",
+    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+  },
 
 ];
 
 const scheduleData = {
   day1: [
-    { time: "09:00 - 10:00", talk: "Opening Keynote: The Future of AI Reasoning" },
-    { time: "10:00 - 10:30", talk: "Coffee Break" },
-    { time: "10:30 - 11:30", talk: "Session 1A: Advances in Neural Symbolic Integration" },
-    { time: "10:30 - 11:30", talk: "Session 1B: Explainable AI (XAI) Techniques" },
-    { time: "11:30 - 12:30", talk: "Invited Talk: Dr. Alicja", speakerKey: "Alicja" },
-    { time: "12:30 - 14:00", talk: "Lunch Break" },
-    { time: "14:00 - 15:00", talk: "Session 2A: Large Language Models and Reasoning" },
-    { time: "14:00 - 15:00", talk: "Session 2B: Reinforcement Learning for Problem Solving" },
-    { time: "15:00 - 15:30", talk: "Coffee Break" },
-    { time: "15:30 - 16:30", talk: "Panel Discussion: Ethical Implications of Advanced AI" },
+    { time: "9:30 - 10:00", talk: "Workshop Introduction" },
+    { time: "10:00 - 11:00", talk: "Aryo Lotfi", speakerKey: "Aryo Lotfi" },
+    { time: "11:00 - 11:15", talk: "Coffee Break" },
+    { time: "11:15 - 12:00", talk: "Gracjan Góral", speakerKey: "Gracjan Góral" },
+    { time: "12:15 - 13:45", talk: "Lunch Break" },
+    { time: "13:45 - 14:45", talk: "Takeru Miyato", speakerKey: "Takeru Miyato" },
+    { time: "14:45 - 15:00", talk: "Coffee Break" },
+    { time: "15:00 - 16:00", talk: "William T. Redman", speakerKey: "William T. Redman" },
   ],
   day2: [
-    { time: "09:00 - 10:00", talk: "Keynote 2: Cognitive Architectures & AI" },
-    { time: "10:00 - 10:30", talk: "Coffee Break" },
-    { time: "10:30 - 11:30", talk: "Session 3A: Causality in Machine Learning" },
-    { time: "10:30 - 11:30", talk: "Session 3B: Bayesian Approaches to Reasoning" },
-    { time: "11:30 - 12:30", talk: "Invited Talk: Jonas", speakerKey: "Jonas" },
-    { time: "12:30 - 14:00", talk: "Lunch Break" },
-    { time: "14:00 - 15:30", talk: "Workshop: Hands-on Deep Learning for Reasoning" },
-    { time: "15:30 - 16:00", talk: "Coffee Break" },
-    { time: "16:00 - 17:00", talk: "Poster Session & Networking" },
+    { time: "10:00 - 10:45", talk: "Vít Musil", speakerKey: "Vít Musil" },
+    { time: "10:45 - 11:00", talk: "Coffee Break" },
+    { time: "11:00 - 12:00", talk: "Jonas Hübotter", speakerKey: "Jonas Hübotter" },
+    { time: "12:00 - 13:30", talk: "Lunch Break" },
+    { time: "13:30 - 14:30", talk: "Federico Barbero", speakerKey: "Federico Barbero" },
+    { time: "14:30 - 15:00", talk: "Coffee Break" },
+    { time: "15:00 - 16:00", talk: "Kazuki Irie", speakerKey: "Tomáš Pajdla" },
+    {time: "18:00 - 20:00", talk: "Social Event"}
   ],
   day3: [
-    { time: "09:00 - 10:00", talk: "Keynote 3: The Role of Logic in Next-Gen AI" },
-    { time: "10:00 - 10:30", talk: "Coffee Break" },
-    { time: "10:30 - 11:30", talk: "Session 4A: Knowledge Representation" },
-    { time: "10:30 - 11:30", talk: "Session 4B: Applications of AI in Science & Industry" },
-    { time: "11:30 - 12:30", talk: "Invited Talk: Mikoláš Janota", speakerKey: "Mikoláš Janota" },
+    { time: "10:00 - 10:45", talk: "Mikoláš Janota", speakerKey: "Mikoláš Janota" },
+    { time: "10:45 - 11:00", talk: "Coffee Break" },
+    { time: "11:00 - 12:00", talk: "Mirek Olšák"},
     { time: "12:30 - 14:00", talk: "Lunch Break" },
-    { time: "14:00 - 15:00", talk: "Session 5A: Future Challenges in AI Reasoning" },
-    { time: "14:00 - 15:00", talk: "Session 5B: AI and Human Collaboration Models" },
-    { time: "15:00 - 15:30", talk: "Closing Remarks & Best Paper Awards" },
+    { time: "14:00 - 15:00", talk: "Alicja Ziarko", speakerKey: "Alicja Ziarko"},
+    { time: "15:00 - 15:30", talk: "Core Francisco Park", speakerKey: "Core Francisco Park" },
+    { time: "15:30 - 16:00", talk: "Tomáš Pajdla", speakerKey: "Tomáš Pajdla" },
   ],
 };
 
@@ -99,13 +125,12 @@ const scheduleData = {
 const speakerContainerStyle = {
   textAlign: 'center',
   //margin: '20px',
-  cursor: 'pointer',
   //width: '150px', // Fixed width for each speaker item
 };
 
 const speakerImageStyle = {
-  width: '300px',
-  height: '300px',
+  width: '200px',
+  height: '200px',
   borderRadius: '50%',
   objectFit: 'cover',
   marginBottom: '10px',
@@ -115,8 +140,8 @@ const speakerImageStyle = {
 
 const speakerNameStyle = {
   marginTop: '8px',
-  fontSize: '1.8em',
-  fontWeight: '600',
+  fontSize: '1.5em',
+  fontWeight: '400',
   color: 'rgb(123 123 123)',
   marginBottom: '0px',
   lineHeight: '1',
@@ -423,24 +448,49 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section" style={{ marginTop: '0px', paddingTop: '0px' }}>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2" style={{ textAlign: 'center', marginTop: '3rem' }}>
+              <h3 className="has-text-weight-semibold is-size-2" style={{ textAlign: 'center' }}>
                 <a id="organizers" href="#organizers">{"Organizers"}</a>
               </h3>
+              <div className="columns is-multiline is-centered" style={{ marginTop: '2rem' }}>
               <div
-          className="column is-one-quarter-desktop is-one-quarter-tablet"
-          style={speakerContainerStyle}
-        >
-          <img
-            src={"/img/speakers/alicja.jpg"} // Expecting path like /img/speakers/alicja.jpg
-            alt={"Jan Hula"}
-            style={speakerImageStyle}
-          />  
-          <p style={speakerNameStyle}>{"Jan Hula"}</p>
-        </div>
+                className="column is-one-quarter-desktop is-one-quarter-tablet"
+                style={speakerContainerStyle}
+              >
+                <img
+                  src={"/img/speakers/jansq.jpg"} // Expecting path like /img/speakers/alicja.jpg
+                  alt={"Jan"}
+                  style={speakerImageStyle}
+                />  
+                <p style={speakerNameStyle}>{"Jan Hůla"}</p>
+              </div>
+              <div
+                  className="column is-one-quarter-desktop is-one-quarter-tablet"
+                style={speakerContainerStyle}
+              >
+                <img
+                  src={"/img/speakers/Frantisek.jpg"} // Expecting path like /img/speakers/alicja.jpg
+                  alt={"Frantisek"}
+                  style={speakerImageStyle}
+                />  
+                <p style={speakerNameStyle}>{"František Koutenský"}</p>
+              </div>
+              <div
+                  className="column is-one-quarter-desktop is-one-quarter-tablet"
+                style={speakerContainerStyle}
+              >
+                <img
+                  src={"/img/speakers/petr.jpg"} // Expecting path like /img/speakers/alicja.jpg
+                  alt={"Petr"}
+                  style={speakerImageStyle}
+                />  
+                <p style={speakerNameStyle}>{"Petr Hyner"}</p>
+              </div>
+
+              </div>
             </div>
           </div>
         </div>
