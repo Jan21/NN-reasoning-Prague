@@ -61,10 +61,18 @@ const Speakers = ({ speakers }) => {
           onMouseEnter={(e) => e.currentTarget.querySelector('img').style.transform = 'scale(1.05)'}
           onMouseLeave={(e) => e.currentTarget.querySelector('img').style.transform = 'scale(1)'}
         >
-          <img
+          <StaticImage
             src={speaker.image} // Expecting path like /img/speakers/alicja.jpg
             alt={speaker.name}
-            style={speakerImageStyle}
+            width={300}
+            height={300}
+            objectFit="cover"
+            style={{
+              borderRadius: '50%',
+              border: '3px solid #ddd',
+              transition: 'transform 0.2s ease-in-out',
+              marginBottom: '10px',
+            }}
           />
           <p style={speakerNameStyle}>{speaker.name}</p>
           <p style={speakerWorksStyle}>({speaker.works})</p>

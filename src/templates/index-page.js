@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { getImage, StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Speakers from "../components/Speakers";
@@ -13,57 +13,62 @@ const sampleSpeakers = [
 
   { name: "Core Francisco Park", 
     works: "Harvard",
-    image: "/img/speakers/francisco.jpg", 
+    image: "../img/speakers/francisco.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
   { name: "Kazuki Irie", 
     works: "Harvard",
-    image: "/img/speakers/kazuki.jpg", 
+    image: "../img/speakers/kazuki.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
   { name: "William T. Redman", 
     works: "Johns Hopkins",
-    image: "/img/speakers/william.jpg", 
+    image: "../img/speakers/william.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
   { name: "Federico Barbero", 
     works: "Oxford",
-    image: "/img/speakers/federico.jpg", 
+    image: "../img/speakers/federico.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
 
   { name: "Jonas Hübotter", 
     works: "ETH Zurich",
-    image: "/img/speakers/jonas.jpg", 
+    image: "../img/speakers/jonas.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
   { name: "Aryo Lotfi", 
     works: "EPFL",
-    image: "/img/speakers/aryosq.jpg", 
+    image: "../img/speakers/aryosq.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
   { name: "Takeru Miyato", 
     works: "U. Tübingen",
-    image: "/img/speakers/takeru.webp", 
+    image: "../img/speakers/takeru.webp", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
-
+  { name: "Mirek Olšák", 
+    works: "Oxford/DeepMind",
+    image: "../img/speakers/mirek.jpg", 
+    title: "Specialist in AI ethics.",
+    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+  },
   { name: "Mikoláš Janota", 
     works: "CIIRC",
-    image: "/img/speakers/mikolas.jpg", 
+    image: "../img/speakers/mikolas.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
   { name: "Tomáš Pajdla", 
     works: "CIIRC",
-    image: "/img/speakers/tpajdla.jpg", 
+    image: "../img/speakers/tpajdla.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
@@ -76,13 +81,13 @@ const sampleSpeakers = [
   { 
     name: "Alicja Ziarko", 
     works: "IDEAS NCBR",
-    image: "/img/speakers/alicja.jpg", 
+    image: "../img/speakers/alicja.jpg", 
     title: "Title", 
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
   { name: "Gracjan Góral", 
     works: "IDEAS NCBR",
-    image: "/img/speakers/gracjansq.jpg", 
+    image: "../img/speakers/gracjansq.jpg", 
     title: "Specialist in AI ethics.",
     abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
   },
@@ -460,10 +465,18 @@ export const IndexPageTemplate = ({
                 className="column is-one-quarter-desktop is-one-quarter-tablet"
                 style={speakerContainerStyle}
               >
-                <img
-                  src={"/img/speakers/jansq.jpg"} // Expecting path like /img/speakers/alicja.jpg
+                <StaticImage
+                  src={"../img/organizers/jansq.jpg"}
                   alt={"Jan"}
-                  style={speakerImageStyle}
+                  width={200}
+                  height={200}
+                  objectFit="cover"
+                  style={{
+                    borderRadius: '50%',
+                    border: '3px solid #ddd',
+                    transition: 'transform 0.2s ease-in-out',
+                    marginBottom: '10px',
+                  }}
                 />  
                 <p style={speakerNameStyle}>{"Jan Hůla"}</p>
               </div>
@@ -471,10 +484,18 @@ export const IndexPageTemplate = ({
                   className="column is-one-quarter-desktop is-one-quarter-tablet"
                 style={speakerContainerStyle}
               >
-                <img
-                  src={"/img/speakers/Frantisek.jpg"} // Expecting path like /img/speakers/alicja.jpg
+                <StaticImage
+                  src={"../img/organizers/Frantisek.jpg"}
                   alt={"Frantisek"}
-                  style={speakerImageStyle}
+                  width={200}
+                  height={200}
+                  objectFit="cover"
+                  style={{
+                    borderRadius: '50%',
+                    border: '3px solid #ddd',
+                    transition: 'transform 0.2s ease-in-out',
+                    marginBottom: '10px',
+                  }}
                 />  
                 <p style={speakerNameStyle}>{"František Koutenský"}</p>
               </div>
@@ -482,10 +503,18 @@ export const IndexPageTemplate = ({
                   className="column is-one-quarter-desktop is-one-quarter-tablet"
                 style={speakerContainerStyle}
               >
-                <img
-                  src={"/img/speakers/petr.jpg"} // Expecting path like /img/speakers/alicja.jpg
+                <StaticImage
+                  src={"../img/organizers/petr.jpg"}
                   alt={"Petr"}
-                  style={speakerImageStyle}
+                  width={200}
+                  height={200}
+                  objectFit="cover"
+                  style={{
+                    borderRadius: '50%',
+                    border: '3px solid #ddd',
+                    transition: 'transform 0.2s ease-in-out',
+                    marginBottom: '10px',
+                  }}
                 />  
                 <p style={speakerNameStyle}>{"Petr Hyner"}</p>
               </div>
