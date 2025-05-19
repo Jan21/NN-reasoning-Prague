@@ -64,7 +64,7 @@ const scheduleData = {
     { time: "10:00 - 10:30", talk: "Coffee Break" },
     { time: "10:30 - 11:30", talk: "Session 1A: Advances in Neural Symbolic Integration" },
     { time: "10:30 - 11:30", talk: "Session 1B: Explainable AI (XAI) Techniques" },
-    { time: "11:30 - 12:30", talk: "Invited Talk: Dr. Alicja" },
+    { time: "11:30 - 12:30", talk: "Invited Talk: Dr. Alicja", speakerKey: "Alicja" },
     { time: "12:30 - 14:00", talk: "Lunch Break" },
     { time: "14:00 - 15:00", talk: "Session 2A: Large Language Models and Reasoning" },
     { time: "14:00 - 15:00", talk: "Session 2B: Reinforcement Learning for Problem Solving" },
@@ -76,7 +76,7 @@ const scheduleData = {
     { time: "10:00 - 10:30", talk: "Coffee Break" },
     { time: "10:30 - 11:30", talk: "Session 3A: Causality in Machine Learning" },
     { time: "10:30 - 11:30", talk: "Session 3B: Bayesian Approaches to Reasoning" },
-    { time: "11:30 - 12:30", talk: "Invited Talk: Jonas" },
+    { time: "11:30 - 12:30", talk: "Invited Talk: Jonas", speakerKey: "Jonas" },
     { time: "12:30 - 14:00", talk: "Lunch Break" },
     { time: "14:00 - 15:30", talk: "Workshop: Hands-on Deep Learning for Reasoning" },
     { time: "15:30 - 16:00", talk: "Coffee Break" },
@@ -87,7 +87,7 @@ const scheduleData = {
     { time: "10:00 - 10:30", talk: "Coffee Break" },
     { time: "10:30 - 11:30", talk: "Session 4A: Knowledge Representation" },
     { time: "10:30 - 11:30", talk: "Session 4B: Applications of AI in Science & Industry" },
-    { time: "11:30 - 12:30", talk: "Invited Talk: Mikoláš Janota" },
+    { time: "11:30 - 12:30", talk: "Invited Talk: Mikoláš Janota", speakerKey: "Mikoláš Janota" },
     { time: "12:30 - 14:00", talk: "Lunch Break" },
     { time: "14:00 - 15:00", talk: "Session 5A: Future Challenges in AI Reasoning" },
     { time: "14:00 - 15:00", talk: "Session 5B: AI and Human Collaboration Models" },
@@ -134,6 +134,8 @@ const speakerWorksStyle = {
 
 const TimeSchedule = () => {
   const [activeDay, setActiveDay] = useState('day1');
+  const [selectedSpeakerData, setSelectedSpeakerData] = useState(null);
+
   const conferenceDays = [
     { key: 'day1', label: 'Day 1 (July 10)' },
     { key: 'day2', label: 'Day 2 (July 11)' },
@@ -177,6 +179,79 @@ const TimeSchedule = () => {
     borderBottom: isLastRow ? 'none' : '1px solid #dbdbdb', // Standard Bulma border color for horizontal lines
   });
 
+  const handleSpeakerTalkClick = (speakerKey) => {
+    const speaker = sampleSpeakers.find(s => s.name === speakerKey);
+    if (speaker) {
+      setSelectedSpeakerData(speaker);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedSpeakerData(null);
+  };
+
+  const clickableTalkStyle = {
+    color: '#3273dc', // Bulma primary blue
+    border: 'none',
+    background: 'none',
+    padding: 0,
+    cursor: 'pointer',
+    textDecoration: 'underline',
+    textAlign: 'left', // Ensure text aligns with other non-clickable talks
+    fontSize: 'inherit', // Inherit font size from td
+    fontFamily: 'inherit', // Inherit font family
+  };
+
+  // Modal Styles
+  const modalOverlayStyle = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 1000,
+  };
+
+  const modalContentStyle = {
+    backgroundColor: 'white',
+    padding: '30px',
+    borderRadius: '8px',
+    maxWidth: '600px',
+    width: '90%',
+    maxHeight: '85vh',
+    overflowY: 'auto',
+    textAlign: 'left',
+    position: 'relative', // For close button positioning
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+  };
+
+  const modalCloseButtonStyle = {
+    position: 'absolute',
+    top: '15px',
+    right: '15px',
+    background: 'none',
+    border: 'none',
+    fontSize: '1.8em',
+    cursor: 'pointer',
+    color: '#666',
+  };
+
+  const modalSpeakerImageStyle = {
+    width: '150px',
+    height: '150px',
+    borderRadius: '50%',
+    objectFit: 'cover',
+    marginBottom: '15px',
+    border: '3px solid #ddd',
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  };
+
   return (
     <div>
       <div style={tabButtonContainerStyle}>
@@ -198,14 +273,46 @@ const TimeSchedule = () => {
           </tr>
         </thead>
         <tbody>
-          {scheduleData[activeDay].map((item, index, arr) => (
-            <tr key={index}>
-              <td style={tdStyle(index === arr.length - 1)}>{item.time}</td>
-              <td style={tdStyle(index === arr.length - 1)}>{item.talk}</td>
-            </tr>
-          ))}
+          {scheduleData[activeDay].map((item, index, arr) => {
+            const isLast = index === arr.length - 1;
+            if (item.speakerKey) {
+              return (
+                <tr key={index}>
+                  <td style={tdStyle(isLast)}>{item.time}</td>
+                  <td style={tdStyle(isLast)}>
+                    <button 
+                      onClick={() => handleSpeakerTalkClick(item.speakerKey)}
+                      style={clickableTalkStyle}
+                    >
+                      {item.talk}
+                    </button>
+                  </td>
+                </tr>
+              );
+            } else {
+              return (
+                <tr key={index}>
+                  <td style={tdStyle(isLast)}>{item.time}</td>
+                  <td style={tdStyle(isLast)}>{item.talk}</td>
+                </tr>
+              );
+            }
+          })}
         </tbody>
       </table>
+
+      {selectedSpeakerData && (
+        <div style={modalOverlayStyle} onClick={closeModal}>
+          <div style={modalContentStyle} onClick={(e) => e.stopPropagation()}>
+            <button style={modalCloseButtonStyle} onClick={closeModal}>&times;</button>
+            <img src={selectedSpeakerData.image} alt={selectedSpeakerData.name} style={modalSpeakerImageStyle} />
+            <h3 style={{ ...speakerNameStyle, textAlign: 'center', marginBottom: '5px' }}>{selectedSpeakerData.name}</h3>
+            <p style={{ ...speakerWorksStyle, textAlign: 'center', fontSize: '1.1em', marginBottom: '15px' }}>{selectedSpeakerData.works}</p>
+            <h4 style={{ marginTop: '20px', marginBottom: '8px', color: '#333', fontSize: '1.2em', fontWeight: '600' }}>{selectedSpeakerData.title}</h4>
+            <p style={{ fontSize: '1em', lineHeight: '1.6', color: '#4a4a4a' }}>{selectedSpeakerData.abstract}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -279,7 +386,7 @@ export const IndexPageTemplate = ({
                       <h3 className="has-text-weight-semibold is-size-2" style={{ textAlign: 'center', marginTop: '3rem' }}>
                         <a id="location" href="#location">{"Location"}</a>
                       </h3>
-                      <p style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.4em' }}>Jugoslávských partyzánů 1580/3, 160 00 Dejvice</p>
+                      <p style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.4em' }}>Jugoslávských partyzánů 1580/3, 160 00 Dejvice (exact location will be announced soon)</p>
                       <div className="map-container" style={{ 
                           width: 'calc(100% + 1.5rem)', /* Expand width to cover column padding */
                           marginLeft: '-0.75rem',       /* Offset to the left by column padding */
