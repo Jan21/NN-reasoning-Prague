@@ -4,11 +4,12 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function FullWidthImage(props) {
   const {
-    height = 400,
+    height = 900,
     img,
     title,
     subheading,
-    imgPosition = "top left",
+    datum,
+    imgPosition = "center left",
   } = props;
 
   return (
@@ -61,19 +62,20 @@ export default function FullWidthImage(props) {
               // This centers the other elements inside the hero component
               placeItems: "center",
               display: "grid",
+              
             }}
           >
             {/* Any content here will be centered in the component */}
             {title && (
               <h1
-                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+                className="is-size-2-mobile is-size-1-tablet is-size-1-widescreen"
                 style={{
                   boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
+                    "rgb(255, 255, 255) 0.5rem 0px 0px, rgb(255, 255, 255) -0.5rem 0px 0px",
+                  backgroundColor: "rgb(255, 255, 255)",
+                  color: "rgb(214, 56, 16)",
                   lineHeight: "1",
-                  padding: "0.25em",
+                  padding: "17px",
                 }}
               >
                 {title}
@@ -81,18 +83,34 @@ export default function FullWidthImage(props) {
             )}
             {subheading && (
               <h3
-                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-1-widescreen"
                 style={{
                   boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
+                    "rgb(255, 255, 255) 0.5rem 0px 0px, rgb(255, 255, 255) -0.5rem 0px 0px",
+                  backgroundColor: "rgb(255, 255, 255)",
+                  color: "rgb(82, 82, 82)",
                   lineHeight: "1",
-                  padding: "0.25rem",
+                  padding: "17px",
                   marginTop: "0.5rem",
                 }}
               >
                 {subheading}
+              </h3> 
+            )}
+            {datum && (
+              <h3
+                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-1-widescreen"
+                style={{
+                  boxShadow:
+                    "rgb(255, 255, 255) 0.5rem 0px 0px, rgb(255, 255, 255) -0.5rem 0px 0px",
+                  backgroundColor: "rgb(255, 255, 255)",
+                  color: "rgb(82, 82, 82)",
+                  lineHeight: "1",
+                  padding: "17px",
+                  marginTop: "0.5rem",
+                }}
+              >
+                {datum}
               </h3>
             )}
           </div>

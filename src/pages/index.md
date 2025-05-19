@@ -1,16 +1,14 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Prague Synapse 2025
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Prague Synapse 2025
+subheading: 1st Prague Workshop on Neural Networks and Reasoning
+datum: 10.-12.7.2025, CIIRC
 mainpitch:
   title: Why Kaldi
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur fringilla ex et malesuada. Morbi metus velit, posuere non maximus fringilla, ornare in quam. Curabitur elementum vel eros sed dictum. Nam faucibus mauris vel urna aliquam porttitor et id dui. Nam consectetur ligula sed dui dapibus, ut cursus elit placerat. Aliquam rhoncus et enim id condimentum. Cras ornare facilisis neque a dictum. Donec et risus rutrum dolor aliquam pretium. Nullam fermentum lectus erat, a lobortis metus condimentum eu. Quisque sit amet bibendum tellus. Mauris sed luctus libero, vitae vulputate lorem.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -18,7 +16,7 @@ description: >-
   anyone.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/speakers/alicja.jpg
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
