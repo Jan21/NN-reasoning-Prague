@@ -446,7 +446,7 @@ export const IndexPageTemplate = ({
               </h3>
               <p style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.4em' }}>
                 The workshop is in-person only and free of charge. There are about 50 seats for people who wish to attend the talks. 
-                If you are interested in participating, please fill <a href="http://docs.google.com/forms/d/e/1FAIpQLSfWr_5Os_C0q1DML3-vrU_FBc9kPAxNMJ475GGG0O72L7IBmA/viewform">this form</a> or contact us at <a href="mailto:prague.synapse@gmail.com">prague.synapse@gmail.com</a>.
+                If you are interested in participating, please fill <a href="http://docs.google.com/forms/d/e/1FAIpQLSfWr_5Os_C0q1DML3-vrU_FBc9kPAxNMJ475GGG0O72L7IBmA/viewform">this form</a> or contact us at <a href="mailto:praguesynapse@gmail.com">praguesynapse@gmail.com</a>.
     
               </p>
             </div>
