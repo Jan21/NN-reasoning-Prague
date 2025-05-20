@@ -5,7 +5,6 @@ import { getImage, StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Speakers from "../components/Speakers";
-import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
 // Sample speaker data - you'll likely want to move this to your CMS or a data file later
@@ -121,7 +120,7 @@ const scheduleData = {
     { time: "11:00 - 12:00", talk: "Mirek Olšák: AlphaGeometry 2", speakerKey: "Mirek Olšák"},
     { time: "12:30 - 14:00", talk: "Lunch Break" },
     { time: "14:00 - 15:00", talk: "Alicja Ziarko: Contrastive Representations for Combinatorial Reasoning", speakerKey: "Alicja Ziarko"},
-    { time: "15:00 - 16:00", talk: "Core Francisco Park: New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
+    { time: "15:00 - 16:30", talk: "Core Francisco Park: New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
     // { time: "15:30 - 16:00", talk: "Tomáš Pajdla", speakerKey: "Tomáš Pajdla" },
   ],
 };

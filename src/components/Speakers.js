@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { getImage, StaticImage } from "gatsby-plugin-image";
 
 import SpeakerModal from './SpeakerModal'; //  the modal
 //import "../src/style/bulma-style.sass" // Adjust path as needed
