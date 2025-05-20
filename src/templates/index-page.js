@@ -14,82 +14,82 @@ const sampleSpeakers = [
   { name: "Core Francisco Park", 
     works: "Harvard",
     image: "../img/speakers/francisco.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "New News: System-2 Fine-tuning for Robust Integration of New Knowledge",
+    abstract: "Abstract: TBD"
   },
   { name: "Kazuki Irie", 
     works: "Harvard",
     image: "../img/speakers/kazuki.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Metalearning Continual Learning Algorithms",
+    abstract: "Abstract: TBD"
   },
   { name: "William T. Redman", 
     works: "Johns Hopkins",
     image: "../img/speakers/william.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Koopman Learning with Episodic Memory",
+    abstract: "Abstract: TBD"
   },
   { name: "Federico Barbero", 
     works: "Oxford",
     image: "../img/speakers/federico.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Why is Long-context Reasoning with LLMs Hard?",
+    abstract: "Abstract: TBD"
   },
 
   { name: "Jonas Hübotter", 
     works: "ETH Zurich",
     image: "../img/speakers/jonas.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Towards Solving Hard Problems through Test-time Training",
+    abstract: "Abstract: TBD"
   },
   { name: "Aryo Lotfi", 
     works: "EPFL",
     image: "../img/speakers/aryosq.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Generalization on the Unseen, Logic Reasoning and Degree Curriculum",
+    abstract: "Abstract: TBD"
   },
   { name: "Takeru Miyato", 
     works: "U. Tübingen",
     image: "../img/speakers/takeru.webp", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Artificial Kuramoto Oscillatory Neurons",
+    abstract: "Abstract: TBD"
   },
   { name: "Mirek Olšák", 
     works: "Oxford/DeepMind",
     image: "../img/speakers/mirek.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "AlphaGeometry 2",
+    abstract: "Abstract: TBD"
   },
   { name: "Mikoláš Janota", 
     works: "CIIRC",
     image: "../img/speakers/mikolas.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Introduction to Boolean Satisfiability and CDCL solvers",
+    abstract: "Abstract: TBD"
   },
-  { name: "Tomáš Pajdla", 
-    works: "CIIRC",
-    image: "../img/speakers/tpajdla.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
-  },
+  // { name: "Tomáš Pajdla", 
+  //   works: "CIIRC",
+  //   image: "../img/speakers/tpajdla.jpg", 
+  //   title: "Specialist in AI ethics.",
+  //   abstract: "Abstract: TBD"
+  // },
   { name: "Vít Musil", 
     works: "MUNI",
     image: "/img/speakers/vejteksq.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Backpropagating through Combinatorial Solvers",
+    abstract: "Abstract: TBD"
   },
   { 
     name: "Alicja Ziarko", 
     works: "IDEAS NCBR",
     image: "../img/speakers/alicja.jpg", 
-    title: "Title", 
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "Contrastive Representations for Combinatorial Reasoning", 
+    abstract: "Abstract: TBD"
   },
   { name: "Gracjan Góral", 
     works: "IDEAS NCBR",
     image: "../img/speakers/gracjansq.jpg", 
-    title: "Specialist in AI ethics.",
-    abstract: "Pioneering researcher in neural networks with focus on deep learning architectures that mimic human cognitive processes. Her work bridges the gap between traditional computational models and biologically-inspired artificial intelligence systems."
+    title: "What Matters in Hierarchical Search for Combinatorial Reasoning Problems?",
+    abstract: "Abstract: TBD"
   },
 
 ];
@@ -97,32 +97,32 @@ const sampleSpeakers = [
 const scheduleData = {
   day1: [
     { time: "9:30 - 10:00", talk: "Workshop Introduction" },
-    { time: "10:00 - 11:00", talk: "Aryo Lotfi", speakerKey: "Aryo Lotfi" },
+    { time: "10:00 - 11:00", talk: "Aryo Lotfi: Generalization on the Unseen, Logic Reasoning and Degree Curriculum", speakerKey: "Aryo Lotfi" },
     { time: "11:00 - 11:15", talk: "Coffee Break" },
-    { time: "11:15 - 12:00", talk: "Gracjan Góral", speakerKey: "Gracjan Góral" },
+    { time: "11:15 - 12:00", talk: "Gracjan Góral: What Matters in Hierarchical Search for Combinatorial Reasoning Problems?", speakerKey: "Gracjan Góral" },
     { time: "12:15 - 13:45", talk: "Lunch Break" },
-    { time: "13:45 - 14:45", talk: "Takeru Miyato", speakerKey: "Takeru Miyato" },
+    { time: "13:45 - 14:45", talk: "Takeru Miyato: Artificial Kuramoto Oscillatory Neurons", speakerKey: "Takeru Miyato" },
     { time: "14:45 - 15:00", talk: "Coffee Break" },
-    { time: "15:00 - 16:00", talk: "William T. Redman", speakerKey: "William T. Redman" },
+    { time: "15:00 - 16:00", talk: "William T. Redman: Koopman Learning with Episodic Memory", speakerKey: "William T. Redman" },
   ],
   day2: [
-    { time: "10:00 - 10:45", talk: "Vít Musil", speakerKey: "Vít Musil" },
+    { time: "10:00 - 10:45", talk: "Vít Musil: Backpropagating through Combinatorial Solvers", speakerKey: "Vít Musil" },
     { time: "10:45 - 11:00", talk: "Coffee Break" },
-    { time: "11:00 - 12:00", talk: "Jonas Hübotter", speakerKey: "Jonas Hübotter" },
+    { time: "11:00 - 12:00", talk: "Jonas Hübotter: Towards Solving Hard Problems through Test-time Training", speakerKey: "Jonas Hübotter" },
     { time: "12:00 - 13:30", talk: "Lunch Break" },
-    { time: "13:30 - 14:30", talk: "Federico Barbero", speakerKey: "Federico Barbero" },
+    { time: "13:30 - 14:30", talk: "Federico Barbero: Why is Long-context Reasoning with LLMs Hard?", speakerKey: "Federico Barbero" },
     { time: "14:30 - 15:00", talk: "Coffee Break" },
-    { time: "15:00 - 16:00", talk: "Kazuki Irie", speakerKey: "Tomáš Pajdla" },
+    { time: "15:00 - 16:00", talk: "Kazuki Irie: Metalearning Continual Learning Algorithms", speakerKey: "Kazuki Irie" },
     {time: "18:00 - 20:00", talk: "Social Event"}
   ],
   day3: [
-    { time: "10:00 - 10:45", talk: "Mikoláš Janota", speakerKey: "Mikoláš Janota" },
+    { time: "10:00 - 10:45", talk: "Mikoláš Janota: Introduction to Boolean Satisfiability and CDCL solvers", speakerKey: "Mikoláš Janota" },
     { time: "10:45 - 11:00", talk: "Coffee Break" },
-    { time: "11:00 - 12:00", talk: "Mirek Olšák"},
+    { time: "11:00 - 12:00", talk: "Mirek Olšák: AlphaGeometry 2", speakerKey: "Mirek Olšák"},
     { time: "12:30 - 14:00", talk: "Lunch Break" },
-    { time: "14:00 - 15:00", talk: "Alicja Ziarko", speakerKey: "Alicja Ziarko"},
-    { time: "15:00 - 15:30", talk: "Core Francisco Park", speakerKey: "Core Francisco Park" },
-    { time: "15:30 - 16:00", talk: "Tomáš Pajdla", speakerKey: "Tomáš Pajdla" },
+    { time: "14:00 - 15:00", talk: "Alicja Ziarko: Contrastive Representations for Combinatorial Reasoning", speakerKey: "Alicja Ziarko"},
+    { time: "15:00 - 16:00", talk: "Core Francisco Park: New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
+    // { time: "15:30 - 16:00", talk: "Tomáš Pajdla", speakerKey: "Tomáš Pajdla" },
   ],
 };
 
