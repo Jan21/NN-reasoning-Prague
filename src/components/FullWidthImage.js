@@ -76,6 +76,9 @@ export default function FullWidthImage(props) {
                   color: "rgb(214, 56, 16)",
                   lineHeight: "1",
                   padding: "17px",
+                  marginLeft: "25px",
+                  marginRight: "25px",
+                  textAlign: "center",
                 }}
               >
                 {title}
@@ -92,6 +95,9 @@ export default function FullWidthImage(props) {
                   lineHeight: "1",
                   padding: "17px",
                   marginTop: "0.5rem",
+                  marginLeft: "25px",
+                  marginRight: "25px",
+                  textAlign: "center",
                 }}
               >
                 {subheading}
@@ -107,7 +113,11 @@ export default function FullWidthImage(props) {
                   color: "rgb(82, 82, 82)",
                   lineHeight: "1",
                   padding: "17px",
+                  marginLeft: "25px",
+                  marginRight: "25px",
+                  textAlign: "center",
                   marginTop: "0.5rem",
+                  marginBottom: "0.5rem",
                 }}
               >
                 {datum}
