@@ -521,6 +521,29 @@ export const IndexPageTemplate = ({
               </div>
             </div>
           </div>
+          <div className="columns is-centered is-vcentered">
+            <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <StaticImage
+                  src={"../img/organizers/cedmo_logo.jpg"}
+                  alt={"ciirc"}
+                  width={200}
+                />  
+            </div>
+            <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <StaticImage
+                  src={"../img/organizers/logo_CIIRC_en.svg"}
+                  alt={"ciirc"}
+                  width={200}
+                />  
+            </div>
+            <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <StaticImage
+                  src={"../img/organizers/OSTRAVSKA-UNIVERZITA.png"}
+                  alt={"ciirc"}
+                  width={200}
+                />  
+            </div>
+          </div>
         </div>
       </section>
     </div>

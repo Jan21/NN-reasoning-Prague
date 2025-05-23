@@ -62,7 +62,7 @@ const Navbar = () => {
           </li>
           <li className="navbar-item" style={{ padding: "0px" }}>
             <Link className="navbar-item" to="/#participate">
-              Participate
+              Register
             </Link>
           </li>
           <li className="navbar-item" style={{ padding: "0px" }}>
