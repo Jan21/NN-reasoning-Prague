@@ -14,19 +14,31 @@ const sampleSpeakers = [
     works: "Harvard",
     image: "../img/speakers/francisco.jpg", 
     title: "New News: System-2 Fine-tuning for Robust Integration of New Knowledge",
-    abstract: "Abstract: TBD"
+    abstract: "Abstract: Humans and intelligent animals can effortlessly internalize new information (news) and accurately extract the implications for performing downstream tasks. While large language models (LLMs) can achieve this through in-context learning (ICL) when the news is explicitly given as context, fine-tuning remains challenging for the models to consolidate learning in weights. In this paper, we introduce New News, a dataset composed of hypothetical yet plausible news spanning multiple domains (mathematics, coding, discoveries, leaderboards, events), accompanied by downstream evaluation questions whose correct answers critically depend on understanding and internalizing the news. We first demonstrate a substantial gap between naive fine-tuning and in-context learning (FT-ICL gap) on our news dataset. To address this gap, we explore a suite of self-play data generation protocols -- paraphrases, implications and Self-QAs -- designed to distill the knowledge from the model with context into the weights of the model without the context, which we term System-2 Fine-tuning (Sys2-FT). We systematically evaluate ICL and Sys2-FT performance across data domains and model scales with the Qwen 2.5 family of models. Our results demonstrate that the self-QA protocol of Sys2-FT significantly improves models' in-weight learning of the news. Furthermore, we discover the contexual shadowing effect, where training with the news in context followed by its rephrases or QAs degrade learning of the news. Finally, we show preliminary evidence of an emerging scaling law of Sys2-FT."
   },
   { name: "Kazuki Irie", 
     works: "Harvard",
     image: "../img/speakers/kazuki.jpg", 
-    title: "Metalearning Continual Learning Algorithms",
+    title: "Incentives in Learning Machines",
     abstract: "Abstract: TBD"
+  },
+  { name: "Naomi Saphra", 
+    works: "Harvard",
+    image: "../img/speakers/naomi.jpg", 
+    title: "You Know It Or You Don’t: Phase Transitions, Clustering, and Random Variation in Language Model Training",
+    abstract: "Abstract: While years of scientific research on model training and scaling assume that learning is a gradual and continuous process, breakthroughs on specific capabilities have drawn wide attention. Why are breakthroughs so exciting? Because humans don’t naturally think in continuous gradients, but in discrete conceptual categories. If artificial language models naturally learn discrete conceptual categories, perhaps model understanding is within our grasp. In this talk, In this talk, I will describe what we know of categorical learning in language models, and how discrete concepts are identifiable through empirical training dynamics and through random variation between training runs. These concepts involve syntax learning, out of distribution generalization, and “emergent” capabilities. By leveraging categorical learning, we can ultimately understand a model's natural conceptual structure."
+  },
+  { name: "Róbert Csordás", 
+    works: "Stanford",
+    image: "../img/speakers/csordas.jpg", 
+    title: " Towards Compositional Generalization and Latent Reasoning in Neural Networks",
+    abstract: "Abstract: Much of the recent interest in LLMs focuses on the reasoning capabilities of the models. Modern reasoning models are primarily based on chain-of-thought, which breaks down and solves the problem in the token space. This, however, poses many limitations: there is a discrepancy between the pretraining and reasoning regimes, biasing the models towards potentially incorrect solutions, the recurrent state is a single, discrete token, and the reasoning chain must match the distribution of the training data. I advocate solving these problems using neural architectures that can natively break down problems into subproblems in the latent space, solving them individually and composing their results together to solve the full problem. Such models should be biased towards representing the computation graph of the problem faithfully to the underlying algorithm, but should also be flexible enough to allow learning less structured problems. In this talk, I will show some initial steps towards such models and demonstrate some failure modes of the current LLMs."
   },
   { name: "William T. Redman", 
     works: "Johns Hopkins",
     image: "../img/speakers/william.jpg", 
     title: "Koopman Learning with Episodic Memory",
-    abstract: "Abstract: TBD"
+    abstract: "Abstract: Koopman operator theory has found significant success in learning models of complex, real-world dynamical systems, enabling prediction and control. The greater interpretability and lower computational costs of these models, compared to traditional machine learning methodologies, make Koopman learning an especially appealing approach. Despite this, little work has been performed on endowing Koopman learning with the ability to leverage its own failures. To address this, we equip Koopman methods -- developed for predicting non-autonomous time-series -- with an episodic memory mechanism, enabling global recall of (or attention to) periods in time where similar dynamics previously occurred. We find that a basic implementation of Koopman learning with episodic memory leads to significant improvements in prediction on synthetic and real-world data. Our framework has considerable potential for expansion, allowing for future advances, and opens exciting new directions for Koopman learning."
   },
   { name: "Federico Barbero", 
     works: "Oxford",
@@ -44,19 +56,19 @@ const sampleSpeakers = [
   { name: "Aryo Lotfi", 
     works: "EPFL",
     image: "../img/speakers/aryosq.jpg", 
-    title: "Generalization on the Unseen, Logic Reasoning and Degree Curriculum",
-    abstract: "Abstract: TBD"
+    title: "Breaking Barriers to Global Reasoning Via Chain-of-Thought Methodologies",
+    abstract: "Abstract: This talk explores the limitations of Transformers in performing global reasoning—tasks where individual tokens provide little useful signal. The notion of globality is introduced to formalize this challenge, characterizing the number of tokens required to correlate meaningfully with the target. High-globality tasks, such as connectivity problems, are shown to be difficult for standard Transformers and Vision Transformers to learn efficiently. Scratchpad and chain-of-thought strategies are shown to help circumvent this limitation by introducing intermediate reasoning steps that break the globality. A vision analogue, termed chain-of-sketch, is proposed to address global reasoning in visual domains. Finally, inductive variants of chain-of-thought and chain-of-sketch methodologies are introduced, which afford improved out-of-distribution generalization by imposing a Markovian structure over intermediate reasoning steps."
   },
   { name: "Takeru Miyato", 
     works: "U. Tübingen",
     image: "../img/speakers/takeru.webp", 
     title: "Artificial Kuramoto Oscillatory Neurons",
-    abstract: "Abstract: TBD"
+    abstract: "Abstract: It has long been known in both neuroscience and AI that ``binding'' between neurons leads to a form of competitive learning where representations are compressed in order to represent more abstract concepts in deeper layers of the network. More recently, it was also hypothesized that dynamic (spatiotemporal) representations play an important role in both neuroscience and AI. Building on these ideas, we introduce Artificial Kuramoto Oscillatory Neurons (AKOrN) as a dynamical alternative to threshold units, which can be combined with arbitrary connectivity designs such as fully connected, convolutional, or attentive mechanisms. Our generalized Kuramoto updates bind neurons together through their synchronization dynamics. We show that this idea provides performance improvements across a wide spectrum of tasks such as unsupervised object discovery, adversarial robustness, calibrated uncertainty quantification, and reasoning. We believe that these empirical results show the importance of rethinking our assumptions at the most basic neuronal level of neural representation, and in particular show the importance of dynamical representations."
   },
   { name: "Mirek Olšák", 
-    works: "Oxford/DeepMind",
+    works: "Cambridge/DeepMind",
     image: "../img/speakers/mirek.jpg", 
-    title: "AlphaGeometry 2",
+    title: "Looking for a Game",
     abstract: "Abstract: TBD"
   },
   { name: "Mikoláš Janota", 
@@ -73,16 +85,16 @@ const sampleSpeakers = [
   // },
   { name: "Vít Musil", 
     works: "MUNI",
-    image: "/img/speakers/vejteksq.jpg", 
-    title: "Backpropagating through Combinatorial Solvers",
-    abstract: "Abstract: TBD"
+    image: "/img/speakers/vejteksq2.jpg", 
+    title: "Optimization Layers in Neural Networks",
+    abstract: "Abstract: While neural networks excel at learning complex patterns from raw data, they often struggle with tasks that involve combinatorial or algorithmic reasoning. In contrast, graph algorithms and classical optimization methods offer strong solutions for such problems when given clean specifications. This talk explores how these two areas can be effectively combined. We provide an overview of methods that enable end-to-end training of compositional architectures by incorporating (discrete) optimization problems into neural networks to enhance their algorithmic capabilities."
   },
   { 
     name: "Alicja Ziarko", 
     works: "IDEAS NCBR",
     image: "../img/speakers/alicja.jpg", 
     title: "Contrastive Representations for Combinatorial Reasoning", 
-    abstract: "Abstract: TBD"
+    abstract: "Abstract: Combinatorial optimization lies at the heart of many impactful applications, from logistics and scheduling to scientific discovery. While classical algorithms have long dominated this domain, recent machine learning advances have introduced neural approaches that learn adaptive, data-driven strategies, sometimes outperforming handcrafted heuristics on NP-hard problems. The rise of large language models (LLMs) has further sparked interest in whether sheer scale can unlock combinatorial reasoning. Yet, despite their versatility, LLMs often struggle with the structured, step-by-step precision these problems demand. In this talk, I’ll explore the evolving landscape of neural methods for combinatorial optimization, including approaches that integrate learning with search. I’ll highlight emerging architectures such as SearchFormers and subgoal-driven models, and present our recent work on learning representations whose structure mirrors the underlying combinatorial problem -- enabling models to reason in alignment with the problem’s inherent structure. Together, these developments point toward a future where neural models reason not just broadly, but with the rigor that structured domains demand."
   },
   { name: "Gracjan Góral", 
     works: "IDEAS NCBR",
@@ -96,31 +108,36 @@ const sampleSpeakers = [
 const scheduleData = {
   day1: [
     { time: "9:30 - 10:00", talk: "Workshop Introduction" },
-    { time: "10:00 - 11:00", talk: "Aryo Lotfi: Generalization on the Unseen, Logic Reasoning and Degree Curriculum", speakerKey: "Aryo Lotfi" },
+    { time: "10:00 - 11:00", talk: "Federico Barbero: Why is Long-context Reasoning with LLMs Hard?", speakerKey: "Federico Barbero" },
     { time: "11:00 - 11:15", talk: "Coffee Break" },
-    { time: "11:15 - 12:00", talk: "Gracjan Góral: What Matters in Hierarchical Search for Combinatorial Reasoning Problems?", speakerKey: "Gracjan Góral" },
-    { time: "12:15 - 13:45", talk: "Lunch Break" },
-    { time: "13:45 - 14:45", talk: "Takeru Miyato: Artificial Kuramoto Oscillatory Neurons", speakerKey: "Takeru Miyato" },
+    { time: "11:15 - 12:00", talk: "Jonas Hübotter: Towards Solving Hard Problems through Test-time Training", speakerKey: "Jonas Hübotter" },
+    { time: "12:00 - 14:00", talk: "Lunch Break" },
+    { time: "14:00 - 14:45", talk: "Alicja Ziarko: Contrastive Representations for Combinatorial Reasoning", speakerKey: "Alicja Ziarko" },
     { time: "14:45 - 15:00", talk: "Coffee Break" },
-    { time: "15:00 - 16:00", talk: "William T. Redman: Koopman Learning with Episodic Memory", speakerKey: "William T. Redman" },
+    { time: "15:00 - 15:45", talk: "Core Francisco Park: New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
+    { time: "15:45 - 16:30", talk: "William T. Redman: Koopman Learning with Episodic Memory", speakerKey: "William T. Redman" },
   ],
   day2: [
-    { time: "10:00 - 10:45", talk: "Vít Musil: Backpropagating through Combinatorial Solvers", speakerKey: "Vít Musil" },
-    { time: "10:45 - 11:00", talk: "Coffee Break" },
-    { time: "11:00 - 12:00", talk: "Jonas Hübotter: Towards Solving Hard Problems through Test-time Training", speakerKey: "Jonas Hübotter" },
-    { time: "12:00 - 13:30", talk: "Lunch Break" },
-    { time: "13:30 - 14:30", talk: "Federico Barbero: Why is Long-context Reasoning with LLMs Hard?", speakerKey: "Federico Barbero" },
-    { time: "14:30 - 15:00", talk: "Coffee Break" },
-    { time: "15:00 - 16:00", talk: "Kazuki Irie: Metalearning Continual Learning Algorithms", speakerKey: "Kazuki Irie" },
+    { time: "10:00 - 11:00", talk: "Aryo Lotfi: Breaking Barriers to Global Reasoning Via Chain-of-Thought Methodologies", speakerKey: "Aryo Lotfi" },
+    { time: "11:00 - 11:15", talk: "Coffee Break" },
+    { time: "11:15 - 12:00", talk: "Mikoláš Janota: Introduction to Boolean Satisfiability and CDCL solvers", speakerKey: "Mikoláš Janota" },
+    { time: "12:00 - 14:00", talk: "Lunch Break" },
+    { time: "14:00 - 14:45", talk: "Vít Musil: Backpropagating through Combinatorial Solvers", speakerKey: "Vít Musil" },
+    { time: "14:45 - 15:00", talk: "Coffee Break" },
+    { time: "15:00 - 15:30", talk: "Naomi Saphra: You Know It Or You Don’t: Phase Transitions, Clustering, and Random Variation in Language Model Training", speakerKey: "Naomi Saphra" },
+
+    { time: "15:30 - 16:30", talk: "Poster Session" },
     {time: "18:00 - 20:00", talk: "Social Event"}
   ],
   day3: [
-    { time: "10:00 - 10:45", talk: "Mikoláš Janota: Introduction to Boolean Satisfiability and CDCL solvers", speakerKey: "Mikoláš Janota" },
-    { time: "10:45 - 11:00", talk: "Coffee Break" },
-    { time: "11:00 - 12:00", talk: "Mirek Olšák: AlphaGeometry 2", speakerKey: "Mirek Olšák"},
+    { time: "10:00 - 11:00", talk: "Róbert Csordás: Towards Compositional Generalization and Latent Reasoning in Neural Networks", speakerKey: "Róbert Csordás" },
+    { time: "11:00 - 11:15", talk: "Coffee Break" },
+    { time: "11:15 - 12:00", talk: "Takeru Miyato: Artificial Kuramoto Oscillatory Neurons", speakerKey: "Takeru Miyato"},
     { time: "12:30 - 14:00", talk: "Lunch Break" },
-    { time: "14:00 - 15:00", talk: "Alicja Ziarko: Contrastive Representations for Combinatorial Reasoning", speakerKey: "Alicja Ziarko"},
-    { time: "15:00 - 16:30", talk: "Core Francisco Park: New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
+    { time: "14:00 - 15:00", talk: "Mirek Olšák: Looking for a Game", speakerKey: "Mirek Olšák"},
+    { time: "15:00 - 15:15", talk: "Coffee Break" },
+    { time: "15:00 - 15:45", talk: "Kazuki Irie: Incentives in Learning Machines", speakerKey: "Kazuki Irie" },
+    { time: "15:45 - 16:30", talk: "Gracjan Góral: What Matters in Hierarchical Search for Combinatorial Reasoning Problems?", speakerKey: "Gracjan Góral" },
     // { time: "15:30 - 16:00", talk: "Tomáš Pajdla", speakerKey: "Tomáš Pajdla" },
   ],
 };
@@ -524,23 +541,37 @@ export const IndexPageTemplate = ({
           <div className="columns is-centered is-vcentered">
             <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <StaticImage
-                  src={"../img/organizers/cedmo_logo.jpg"}
-                  alt={"ciirc"}
+                  src={"../img/organizers/eu.png"}
+                  alt={"eu"}
                   width={200}
+                />  
+            </div>
+            <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <StaticImage
+                  src={"../img/organizers/npo.png"}
+                  alt={"npo"}
+                  width={200}
+                />  
+            </div>
+            <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <StaticImage
+                  src={"../img/organizers/mpo.png"}
+                  alt={"mpo"}
+                  width={160}
                 />  
             </div>
             <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <StaticImage
                   src={"../img/organizers/logo_CIIRC_en.svg"}
                   alt={"ciirc"}
-                  width={200}
+                  width={160}
                 />  
             </div>
             <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <StaticImage
                   src={"../img/organizers/OSTRAVSKA-UNIVERZITA.png"}
                   alt={"ciirc"}
-                  width={200}
+                  width={100}
                 />  
             </div>
           </div>
