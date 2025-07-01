@@ -77,7 +77,7 @@ const sampleSpeakers = [
     works: "Cambridge/DeepMind",
     image: "../img/speakers/mirek.jpg", 
     title: "Looking for a Game",
-    abstract: "Abstract: TBD"
+    abstract: "Abstract: We address the question of what kind of formal reasoning system are ideal to be used by a neural network. We look at the important aspects of various logical systems, as well as some specific domains (puzzle games, AlphaGeometry)."
   },
   { name: "Mikoláš Janota", 
     works: "CIIRC",
