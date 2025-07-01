@@ -10,19 +10,19 @@ import FullWidthImage from "../components/FullWidthImage";
 // Sample speaker data - you'll likely want to move this to your CMS or a data file later
 const sampleSpeakers = [
 
-  { name: "Core Francisco Park", 
+  { name: "Core Francisco Park (online)", 
     works: "Harvard",
     image: "../img/speakers/francisco.jpg", 
     title: "New News: System-2 Fine-tuning for Robust Integration of New Knowledge",
     abstract: "Abstract: Humans and intelligent animals can effortlessly internalize new information (news) and accurately extract the implications for performing downstream tasks. While large language models (LLMs) can achieve this through in-context learning (ICL) when the news is explicitly given as context, fine-tuning remains challenging for the models to consolidate learning in weights. In this paper, we introduce New News, a dataset composed of hypothetical yet plausible news spanning multiple domains (mathematics, coding, discoveries, leaderboards, events), accompanied by downstream evaluation questions whose correct answers critically depend on understanding and internalizing the news. We first demonstrate a substantial gap between naive fine-tuning and in-context learning (FT-ICL gap) on our news dataset. To address this gap, we explore a suite of self-play data generation protocols -- paraphrases, implications and Self-QAs -- designed to distill the knowledge from the model with context into the weights of the model without the context, which we term System-2 Fine-tuning (Sys2-FT). We systematically evaluate ICL and Sys2-FT performance across data domains and model scales with the Qwen 2.5 family of models. Our results demonstrate that the self-QA protocol of Sys2-FT significantly improves models' in-weight learning of the news. Furthermore, we discover the contexual shadowing effect, where training with the news in context followed by its rephrases or QAs degrade learning of the news. Finally, we show preliminary evidence of an emerging scaling law of Sys2-FT."
   },
-  { name: "Kazuki Irie", 
+  { name: "Kazuki Irie (online)", 
     works: "Harvard",
     image: "../img/speakers/kazuki.jpg", 
     title: "Incentives in Learning Machines",
     abstract: "Abstract: TBD"
   },
-  { name: "Naomi Saphra", 
+  { name: "Naomi Saphra (online)", 
     works: "Harvard",
     image: "../img/speakers/naomi.jpg", 
     title: "You Know It Or You Don’t: Phase Transitions, Clustering, and Random Variation in Language Model Training",
@@ -34,7 +34,7 @@ const sampleSpeakers = [
     title: " Towards Compositional Generalization and Latent Reasoning in Neural Networks",
     abstract: "Abstract: Much of the recent interest in LLMs focuses on the reasoning capabilities of the models. Modern reasoning models are primarily based on chain-of-thought, which breaks down and solves the problem in the token space. This, however, poses many limitations: there is a discrepancy between the pretraining and reasoning regimes, biasing the models towards potentially incorrect solutions, the recurrent state is a single, discrete token, and the reasoning chain must match the distribution of the training data. I advocate solving these problems using neural architectures that can natively break down problems into subproblems in the latent space, solving them individually and composing their results together to solve the full problem. Such models should be biased towards representing the computation graph of the problem faithfully to the underlying algorithm, but should also be flexible enough to allow learning less structured problems. In this talk, I will show some initial steps towards such models and demonstrate some failure modes of the current LLMs."
   },
-  { name: "William T. Redman", 
+  { name: "William T. Redman (online)", 
     works: "Johns Hopkins",
     image: "../img/speakers/william.jpg", 
     title: "Koopman Learning with Episodic Memory",
@@ -47,7 +47,7 @@ const sampleSpeakers = [
     abstract: "Abstract: Robust reasoning with LLMs over long-context is hard! Frontier models seem to hallucinate or simply output wrong answers. Trying to understand exactly what is going wrong is not an easy task, but it is important to help improve the models of tomorrow. In this talk, I will go over efforts that aim to understand more precisely why long-context reasoning is hard, what goes wrong inside current models, and ways to improve this. I will argue that a main issue that LLMs encounter is that of “over-mixing” — the fact that attention mechanisms tend to act as “averaging” operations and that this averaging destroys information as the context length increases. I will also go over positional encodings and phenomena like attention sinks and the role they play in robust reasoning. Overall, the talk aims to show how one can study failure in long-context regimes “from first principles”, by understanding the mechanisms that are used by LLMs to construct the output. "
   },
 
-  { name: "Jonas Hübotter", 
+  { name: "Jonas Hübotter (online)", 
     works: "ETH Zurich",
     image: "../img/speakers/jonas.jpg", 
     title: "Towards Solving Hard Problems through Test-time Training",
@@ -59,13 +59,13 @@ const sampleSpeakers = [
     title: "Breaking Barriers to Global Reasoning Via Chain-of-Thought Methodologies",
     abstract: "Abstract: This talk explores the limitations of Transformers in performing global reasoning—tasks where individual tokens provide little useful signal. The notion of globality is introduced to formalize this challenge, characterizing the number of tokens required to correlate meaningfully with the target. High-globality tasks, such as connectivity problems, are shown to be difficult for standard Transformers and Vision Transformers to learn efficiently. Scratchpad and chain-of-thought strategies are shown to help circumvent this limitation by introducing intermediate reasoning steps that break the globality. A vision analogue, termed chain-of-sketch, is proposed to address global reasoning in visual domains. Finally, inductive variants of chain-of-thought and chain-of-sketch methodologies are introduced, which afford improved out-of-distribution generalization by imposing a Markovian structure over intermediate reasoning steps."
   },
-  { name: "Takeru Miyato", 
+  { name: "Takeru Miyato (online)", 
     works: "U. Tübingen",
     image: "../img/speakers/takeru.jpg", 
     title: "Artificial Kuramoto Oscillatory Neurons",
     abstract: "Abstract: It has long been known in both neuroscience and AI that ``binding'' between neurons leads to a form of competitive learning where representations are compressed in order to represent more abstract concepts in deeper layers of the network. More recently, it was also hypothesized that dynamic (spatiotemporal) representations play an important role in both neuroscience and AI. Building on these ideas, we introduce Artificial Kuramoto Oscillatory Neurons (AKOrN) as a dynamical alternative to threshold units, which can be combined with arbitrary connectivity designs such as fully connected, convolutional, or attentive mechanisms. Our generalized Kuramoto updates bind neurons together through their synchronization dynamics. We show that this idea provides performance improvements across a wide spectrum of tasks such as unsupervised object discovery, adversarial robustness, calibrated uncertainty quantification, and reasoning. We believe that these empirical results show the importance of rethinking our assumptions at the most basic neuronal level of neural representation, and in particular show the importance of dynamical representations."
   },
-  { name: "Sebastian Risi", 
+  { name: "Sebastian Risi (online)", 
     works: "Sakana AI",
     image: "../img/speakers/sebastian.webp", 
     title: "Continuous Thought Machines",
@@ -116,7 +116,7 @@ const sampleSpeakers = [
     title: "Lightweight Latent Verifiers for Efficient Meta-Generation Strategies",
     abstract: "Abstract: Verifiers are auxiliary models that assess the correctness of outputs generated by base large language models (LLMs). They play a crucial role in many strategies for solving reasoning-intensive problems with LLMs. Typically, verifiers are LLMs themselves, often as large (or larger) than the base model they support, making them computationally expensive. In this work, we introduce a novel lightweight verification approach, LiLaVe, which reliably extracts correctness signals from the hidden states of the base LLM. A key advantage of LiLaVe is its ability to operate with only a small fraction of the computational budget required by traditional LLM-based verifiers. To demonstrate its practicality, we couple LiLaVe with popular meta-generation strategies, like best-of-n or self-consistency. Moreover, we design novel LiLaVe-based approaches, like conditional self-correction or conditional majority voting, that significantly improve both accuracy and efficiency in generation tasks with smaller LLMs. Our work demonstrates the fruitfulness of extracting latent information from the hidden states of LLMs, and opens the door to scalable and resource-efficient solutions for reasoning-intensive applications."
   },
-  { name: "Nanbo Li", 
+  { name: "Nanbo Li (online)", 
     works: "KAUST",
     image: "../img/speakers/nanbo.jpg", 
     title: "FACTS: A Factored State-Space Framework For World Modelling",
@@ -131,12 +131,12 @@ const scheduleData = {
     { time: "9:30 - 10:00", talk: "Workshop Introduction" },
     { time: "10:00 - 11:00", talk: "Federico Barbero: Why is Long-context Reasoning with LLMs Hard?", speakerKey: "Federico Barbero" },
     { time: "11:00 - 11:15", talk: "Coffee Break" },
-    { time: "11:15 - 11:45", talk: "Sebastian Risi: Continuous Thought Machines", speakerKey: "Sebastian Risi" },
+    { time: "11:15 - 11:45", talk: "Sebastian Risi (online): Continuous Thought Machines", speakerKey: "Sebastian Risi" },
     { time: "11:45 - 13:15", talk: "Lunch Break" },
-    { time: "13:15 - 14:00", talk: "Jonas Hübotter: Towards Solving Hard Problems through Test-time Training", speakerKey: "Jonas Hübotter" },
+    { time: "13:15 - 14:00", talk: "Jonas Hübotter (online): Towards Solving Hard Problems through Test-time Training", speakerKey: "Jonas Hübotter" },
     { time: "14:00 - 14:45", talk: "Alicja Ziarko: Contrastive Representations for Combinatorial Reasoning", speakerKey: "Alicja Ziarko" },
     { time: "14:45 - 15:00", talk: "Coffee Break" },
-    { time: "15:00 - 15:45", talk: "Core Francisco Park: New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
+    { time: "15:00 - 15:45", talk: "Core Francisco Park (online): New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
   ],
   day2: [
     { time: "10:00 - 11:00", talk: "Aryo Lotfi: Breaking Barriers to Global Reasoning Via Chain-of-Thought Methodologies", speakerKey: "Aryo Lotfi" },
@@ -146,19 +146,19 @@ const scheduleData = {
     { time: "13:15 - 14:00", talk: "Vít Musil: Backpropagating through Combinatorial Solvers", speakerKey: "Vít Musil" },
     { time: "14:00 - 14:45", talk: "Witold Drzewakowski: Lightweight Latent Verifiers for Efficient Meta-Generation Strategies", speakerKey: "Witold Drzewakowski" },
     { time: "14:45 - 15:00", talk: "Coffee Break" },
-    { time: "15:00 - 15:30", talk: "Naomi Saphra: You Know It Or You Don’t: Phase Transitions, Clustering, and Random Variation in Language Model Training", speakerKey: "Naomi Saphra" },
-    { time: "15:30 - 16:00", talk: "William T. Redman: Koopman Learning with Episodic Memory", speakerKey: "William T. Redman" },
+    { time: "15:00 - 15:30", talk: "Naomi Saphra (online): You Know It Or You Don’t: Phase Transitions, Clustering, and Random Variation in Language Model Training", speakerKey: "Naomi Saphra" },
+    { time: "15:30 - 16:00", talk: "William T. Redman (online): Koopman Learning with Episodic Memory", speakerKey: "William T. Redman" },
     {time: "18:00 - 20:00", talk: "Social Event"}
   ],
   day3: [
     { time: "10:00 - 11:00", talk: "Róbert Csordás: Towards Compositional Generalization and Latent Reasoning in Neural Networks", speakerKey: "Róbert Csordás" },
     { time: "11:00 - 11:15", talk: "Coffee Break" },
-    { time: "11:15 - 11:45", talk: "Takeru Miyato: Artificial Kuramoto Oscillatory Neurons", speakerKey: "Takeru Miyato"},
+    { time: "11:15 - 11:45", talk: "Takeru Miyato (online): Artificial Kuramoto Oscillatory Neurons", speakerKey: "Takeru Miyato"},
     { time: "11:45 - 13:15", talk: "Lunch Break" },
     { time: "13:15 - 14:00", talk: "Mirek Olšák: Looking for a Game", speakerKey: "Mirek Olšák"},
-    { time: "14:00 - 14:45", talk: "Nanbo Li: FACTS: A Factored State-Space Framework For World Modelling", speakerKey: "Nanbo Li"},
+    { time: "14:00 - 14:45", talk: "Nanbo Li (online): FACTS: A Factored State-Space Framework For World Modelling", speakerKey: "Nanbo Li"},
     { time: "14:45 - 15:00", talk: "Coffee Break" },
-    { time: "15:00 - 15:45", talk: "Kazuki Irie: Incentives in Learning Machines", speakerKey: "Kazuki Irie" },
+    { time: "15:00 - 15:45", talk: "Kazuki Irie (online): Incentives in Learning Machines", speakerKey: "Kazuki Irie" },
     { time: "15:45 - 16:30", talk: "Gracjan Góral: What Matters in Hierarchical Search for Combinatorial Reasoning Problems?", speakerKey: "Gracjan Góral" },
     // { time: "15:30 - 16:00", talk: "Tomáš Pajdla", speakerKey: "Tomáš Pajdla" },
   ],
@@ -584,6 +584,20 @@ export const IndexPageTemplate = ({
             </div>
             <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <StaticImage
+                  src={"../img/organizers/eucz.jpg"}
+                  alt={"eucz"}
+                  width={160}
+                />  
+            </div>
+            <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <StaticImage
+                  src={"../img/organizers/msmt.jpg"}
+                  alt={"msmt"}
+                  width={160}
+                />  
+            </div>
+            <div className="column is-one-quarter-desktop has-text-centered" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <StaticImage
                   src={"../img/organizers/logo_CIIRC_en.svg"}
                   alt={"ciirc"}
                   width={160}
@@ -598,7 +612,10 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
+        <div><p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '1.2em' }}>Financováno z projektu Biografie dezinformace s přívlastkem AI: Rizikový fenomén prizmatem moderních věd o člověku - CZ.02.01.01/00/23_025/000872</p></div>
+
       </section>
+      
     </div>
   );
 };
