@@ -85,12 +85,12 @@ const sampleSpeakers = [
     title: "Introduction to Boolean Satisfiability and CDCL solvers",
     abstract: "Abstract: TBD"
   },
-  // { name: "Tomáš Pajdla", 
-  //   works: "CIIRC",
-  //   image: "../img/speakers/tpajdla.jpg", 
-  //   title: "Specialist in AI ethics.",
-  //   abstract: "Abstract: TBD"
-  // },
+  { name: "Tomáš Pajdla", 
+    works: "CIIRC",
+    image: "../img/speakers/tpajdla.jpg", 
+    title: "Algebraic Structure of R-PolyNets Neural Networks",
+    abstract: "Abstract: TBD"
+  },
   { name: "Vít Musil", 
     works: "MUNI",
     image: "/img/speakers/vejteksq2.jpg", 
@@ -137,6 +137,8 @@ const scheduleData = {
     { time: "14:00 - 14:45", talk: "Alicja Ziarko: Contrastive Representations for Combinatorial Reasoning", speakerKey: "Alicja Ziarko" },
     { time: "14:45 - 15:00", talk: "Coffee Break" },
     { time: "15:00 - 15:45", talk: "Core Francisco Park (online): New News: System-2 Fine-tuning for Robust Integration of New Knowledge", speakerKey: "Core Francisco Park" },
+    { time: "15:45 - 16:30", talk: "Tomáš Pajdla: Algebraic Structure of R-PolyNets Neural Networks", speakerKey: "Tomáš Pajdla" },
+
   ],
   day2: [
     { time: "10:00 - 11:00", talk: "Aryo Lotfi: Breaking Barriers to Global Reasoning Via Chain-of-Thought Methodologies", speakerKey: "Aryo Lotfi" },
@@ -454,7 +456,7 @@ export const IndexPageTemplate = ({
                       <h3 className="has-text-weight-semibold is-size-2" style={{ textAlign: 'center', marginTop: '3rem' }}>
                         <a id="location" href="#location">{"Location"}</a>
                       </h3>
-                      <p style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.4em' }}>Jugoslávských partyzánů 1580/3, 160 00 Dejvice, Penthouse, 10th floor (There will be a sign at the entrance)</p>
+                      <p style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.4em' }}>Jugoslávských partyzánů 1580/3, 160 00 Dejvice, Penthouse, Building A, 10th floor (There will be a sign at the entrance)</p>
                       <div className="map-container" style={{ 
                           width: 'calc(100% + 1.5rem)', /* Expand width to cover column padding */
                           marginLeft: '-0.75rem',       /* Offset to the left by column padding */
@@ -483,9 +485,10 @@ export const IndexPageTemplate = ({
                 <a id="participate" href="#participate">{"Participate"}</a>
               </h3>
               <p style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.4em' }}>
-                The workshop is in-person only and free of charge. There are about 50 seats for people who wish to attend the talks. 
+              There are no more empty seats. Looking forward to seeing you next year.
+                {/* The workshop is in-person only and free of charge. There are about 50 seats for people who wish to attend the talks. 
                 If you are interested in participating, please fill <a href="http://docs.google.com/forms/d/e/1FAIpQLSfWr_5Os_C0q1DML3-vrU_FBc9kPAxNMJ475GGG0O72L7IBmA/viewform">this form</a> or contact us at <a href="mailto:praguesynapse@gmail.com">praguesynapse@gmail.com</a>.
-    
+     */}
               </p>
             </div>
           </div>
