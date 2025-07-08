@@ -538,7 +538,7 @@ export const IndexPageTemplate = ({
                     marginBottom: '10px',
                   }}
                 />  
-                <p style={speakerNameStyle}>{"František Koutenský"}</p>
+                <p style={speakerNameStyle}>{"František Dušek"}</p>
               </div>
               <div
                   className="column is-one-quarter-desktop is-one-quarter-tablet"
