@@ -150,7 +150,7 @@ const scheduleData = {
     { time: "14:45 - 15:00", talk: "Coffee Break" },
     { time: "15:00 - 15:30", talk: "Naomi Saphra (online): You Know It Or You Don’t: Phase Transitions, Clustering, and Random Variation in Language Model Training", speakerKey: "Naomi Saphra (online)" },
     { time: "15:30 - 16:00", talk: "William T. Redman (online): Koopman Learning with Episodic Memory", speakerKey: "William T. Redman (online)" },
-    {time: "18:00 - 20:00", talk: "Social Event"}
+    // {time: "18:00 - 20:00", talk: "Social Event"}
   ],
   day3: [
     { time: "10:00 - 11:00", talk: "Róbert Csordás: Towards Compositional Generalization and Latent Reasoning in Neural Networks", speakerKey: "Róbert Csordás" },
